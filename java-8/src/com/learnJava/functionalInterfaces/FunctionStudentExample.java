@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class FunctionStudentExample {
+public class  FunctionStudentExample {
 
     static Function<List<Student>, Map<String, Double>>  function = (students -> {
 

@@ -6,7 +6,7 @@ import java.util.function.UnaryOperator;
 public class FunctionMethodReferenceExample {
 
     /**
-     * Class::instancemethod
+     * Class::instance method
      */
     static Function<String,String> toUpperCaseLambda = (s)->s.toUpperCase();
 

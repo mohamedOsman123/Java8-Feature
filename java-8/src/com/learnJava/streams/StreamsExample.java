@@ -10,6 +10,8 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
+
 public class StreamsExample {
 
     public static void main(String[] args) {
@@ -30,7 +32,9 @@ public class StreamsExample {
                 filter(gpaPredicate) // Stream<Student>
                 .collect(Collectors.toMap(Student::getName ,Student::getActivities ));
 
-        System.out.println("studentMap  : " + studentMap);
+        List<String> studentList=StudentDataBase.getAllStudents().stream().map(Student::getName).collect(toList());
+        System.out.println("Student List with grade less than or equal 3.9 : "+studentList);
+       /* System.out.println("studentMap  : " + studentMap);
 
         List<String> studentActivities = StudentDataBase.getAllStudents().
                 stream() // Stream<Student>
@@ -51,6 +55,6 @@ public class StreamsExample {
 
         System.out.println("namesList  : " + namesList);
 
-
+*/
     }
 }

@@ -11,12 +11,16 @@ public class BiConsumerExample {
 
     public static void nameAndActivities(){
 
+        // implementation of Bi Consumer interface
         BiConsumer<String, List<String>> studentBiConsumer = (name, activities) -> System.out.println(name + " : " + activities);
 
+        // implementation of Consumer interface
         Consumer<String> stringConsumer = (name) -> System.out.println("name is  :" + name);
 
+        // get all student from database
         List<Student> students = StudentDataBase.getAllStudents();
 
+        // get name along with activities
         students.forEach((s) -> studentBiConsumer.accept(s.getName(),s.getActivities()));
     }
 

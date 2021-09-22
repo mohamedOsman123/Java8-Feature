@@ -33,7 +33,7 @@ public class ParallelStreamExample {
 
     public static int sum_parallel_stream(){
 
-        int total = IntStream.rangeClosed(1,1000000)
+         int total = IntStream.rangeClosed(1,1000000)
                   .parallel() // splits the data in to multiple parts //775057
                     .sum();//performs the sum of the individual parts and consolidate the result.
         return total;
